@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiMTECH - Soluções em Tecnologia</title>
+    <title>HiM TECH - Soluções em Tecnologia</title>
     <link rel="icon" href="icon_title.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -436,6 +436,9 @@
 
         .contact-info {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .contact-info h3 {
@@ -470,8 +473,9 @@
 
         .social-links {
             display: flex;
+            justify-content: center;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .social-links a {
@@ -488,6 +492,16 @@
             border-radius: 50%;
             text-decoration: none;
             transition: all 0.3s;
+            position: relative;
+        }
+
+        .social-links a i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            margin: 0;
         }
 
         .social-links a:hover {
@@ -497,58 +511,56 @@
 
         .contact-form {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
-        .form-group {
+        .whatsapp-contact {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .whatsapp-icon {
+            font-size: 80px;
+            color: #25D366;
             margin-bottom: 20px;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
+        .whatsapp-contact h3 {
+            font-size: 1.75rem;
+            margin-bottom: 15px;
         }
 
-        .form-control {
-            width: 100%;
-            padding: 14px 16px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 8px;
-            font-size: 16px;
-            color: var(--text-light);
-            transition: all 0.3s;
+        .whatsapp-contact p {
+            margin-bottom: 25px;
+            opacity: 0.9;
         }
 
-        .form-control:focus {
-            outline: none;
-            border-color: var(--bright);
-            box-shadow: 0 0 0 2px rgba(13, 242, 5, 0.2);
-        }
-
-        /* Select Styling - FIXED */
-        select.form-control {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 15px center;
-            background-size: 16px;
-            padding-right: 45px;
-        }
-
-        select.form-control option {
-            background: var(--primary);
+        .btn-whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
             color: white;
-            padding: 10px;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
         }
 
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-whatsapp i {
+            margin-right: 10px;
+            font-size: 1.2rem;
         }
 
         /* Footer */
@@ -673,7 +685,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#home" class="logo">
-                    <img src="./him_logo.webp" alt="HiMTECH" class="logo-img"
+                    <img src="./him_logo.webp" alt="HiM TECH" class="logo-img"
                         onerror="document.querySelector('.logo-text').style.display='block'; this.style.display='none'">
                     <div class="logo-text">HiM TECH</div>
                 </a>
@@ -769,8 +781,8 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Sobre a HiMTECH</h2>
-                    <p>A HiMTECH nasceu da paixão por tecnologia e inovação. Somos uma empresa especializada em soluções
+                    <h2>Sobre a HiM TECH</h2>
+                    <p>A HiM TECH nasceu da paixão por tecnologia e inovação. Somos uma empresa especializada em soluções
                         digitais completas, desde o desenvolvimento de sistemas complexos até a criação de identidades
                         visuais marcantes.</p>
                     <p>Nossa equipe multidisciplinar combina expertise técnica com criatividade para entregar projetos
@@ -781,7 +793,7 @@
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                        alt="Equipe HiMTECH">
+                        alt="Equipe HiM TECH">
                 </div>
             </div>
         </div>
@@ -796,16 +808,18 @@
             </div>
             <div class="contact-content">
                 <div class="contact-info glass" style="padding: 30px;">
-                    <h3>Informações</h3>
-                    <p><i class="fas fa-envelope"></i> contato@himtech.com.br</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Em breve um endereço físico</p>
-                    <p><i class="fas fa-phone"></i> Número em breve</p>
+                    <div>
+                        <h3>Informações</h3>
+                        <p><i class="fas fa-envelope"></i> contato@himtech.com.br</p>
+                        <p><i class="fas fa-phone"></i> (62) 99184-3855</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Em breve um endereço físico</p>
+                    </div>
 
                     <div class="social-links">
                         <a href="https://www.instagram.com/himtechtecnologia/" target="_blank" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" title="WhatsApp (em breve)">
+                        <a href="https://wa.me/5562991843855" target="_blank" title="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                         <a href="#" title="LinkedIn (em breve)">
@@ -814,35 +828,17 @@
                     </div>
                 </div>
                 <div class="contact-form glass" style="padding: 30px;">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" class="form-control" required>
+                    <div class="whatsapp-contact">
+                        <div class="whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
                         </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Serviço de Interesse</label>
-                            <select id="service" class="form-control" required>
-                                <option value="">Selecione um serviço</option>
-                                <option value="erp-crm">Sistemas ERP/CRM</option>
-                                <option value="website">Criação de Sites</option>
-                                <option value="branding">Identidade Visual</option>
-                                <option value="social-media">Posts para Instagram</option>
-                                <option value="whatsapp-bot">Bots para WhatsApp</option>
-                                <option value="consultancy">Consultoria</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" class="form-control" required
-                                placeholder="Descreva brevemente seu projeto..."></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem <i
-                                class="fas fa-paper-plane"></i></button>
-                    </form>
+                        <h3>Fale Conosco pelo WhatsApp</h3>
+                        <p>Entre em contato diretamente pelo WhatsApp para um atendimento rápido e personalizado.</p>
+                        <a href="https://wa.me/5562991843855?text=Olá! Gostaria de solicitar um orçamento."
+                            target="_blank" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Iniciar Conversa
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -853,12 +849,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>HiMTECH</h3>
+                    <h3>HiM TECH</h3>
                     <p style="opacity: 0.8; margin-bottom: 20px;">Soluções digitais completas para impulsionar seu
                         negócio no mundo digital.</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/himtechtecnologia/" target="_blank">
                             <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5562991843855" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
@@ -883,7 +882,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 HiMTECH Tecnologia. Todos os direitos reservados.</p>
+                <p>&copy; 2025 HiM TECH Tecnologia. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -902,13 +901,6 @@
         // Mobile menu
         document.querySelector('.mobile-menu').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Obrigado pelo seu contato! Em breve retornaremos com uma proposta.');
-            this.reset();
         });
 
         // Smooth scrolling
